@@ -11,10 +11,8 @@ Configuration steps:
 - Login to: http://localhost:15672 user: guest, password guest
 - Create queue "invoices_queue", Durability - Transient; - why? because one of our controller use this queue before initialization in other module.
 - npm install
-- npm start
-  This is it. Our app is working!
 
-      Hint: If you want delete invoice, you need to have his id.
+      Hint: If you want to delete the invoice, you need to have its ID.
       eg: POST: /invoice/1
 
 ## Running the app
