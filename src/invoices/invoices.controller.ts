@@ -24,7 +24,7 @@ export class InvoicesController {
   }
   @Post('invoice')
   @UsePipes(ValidationPipe)
-  async add(@Body() data: InvoiceDto) {
+  async add(@Body() data: InvoiceDto): Promise<string> {
     const result = await this.invoiceService.add(data);
     if (result === 'Invoice added') {
       this.client.emit('Invoice_created', `Invoice created}`);
